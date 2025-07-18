@@ -36,7 +36,7 @@ getConfigBtn.addEventListener('click', async () => {
 // Fetch Public and Private Keys
 const fetchKeys = async () => {
     try {
-        const response = await fetch('https://warp-generatortest.22dikoz22.workers.dev/keys');
+        const response = await fetch('https://test.warp-generator.workers.dev/keys');
         if (!response.ok) throw new Error(`Failed to fetch keys: ${response.status}`);
         const data = await response.text();
         return {
@@ -55,7 +55,7 @@ const extractKey = (data, keyName) =>
 
 // Fetch Account Configuration
 const fetchAccount = async (publicKey, installId, fcmToken) => {
-    const apiUrl = 'https://warp-generatortest.22dikoz22.workers.dev/wg';
+    const apiUrl = 'https://test.warp-generator.workers.dev/wg';
     try {
         const response = await fetch(apiUrl, {
             method: 'POST',
