@@ -36,7 +36,7 @@ getConfigBtn.addEventListener('click', async () => {
 // Fetch Public and Private Keys
 const fetchKeys = async () => {
     try {
-        const response = await fetch('https://www.warp-generator.workers.dev/keys');
+        const response = await fetch('https://keygen.warp-generator.workers.dev/');
         if (!response.ok) throw new Error(`Failed to fetch keys: ${response.status}`);
         const data = await response.text();
         return {
